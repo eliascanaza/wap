@@ -1,0 +1,16 @@
+{
+  "name": "lab12",
+  "version": "1.0.0",
+  "description": "assignment 12",
+  "main": "app.js",
+  "devDependencies": {},
+  "scripts": {
+    "start": "set PORT=3001 && set NODE_ENV=development && nodemon app.js"
+  },
+  "author": "Elias Mamani",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nodemon": "^2.0.15"
+  }
+}
