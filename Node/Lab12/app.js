@@ -5,6 +5,10 @@ const productRouter = require('./routes/productRouter');
 const homeRouter = require('./routes/homeRouter');
 
 const app = express();
+
+//set port
+app.set('port', process.env.PORT || 3000);
+
 const port = app.get('port');
 
 //changing the name of the assets folder
@@ -33,6 +37,6 @@ app.use((req, res, next)=>{
 });
 
 //listening webpage
-app.listen(3000, ()=>{
+app.listen(port, ()=>{
     console.log('Your Server is running on ' + port);
 });
