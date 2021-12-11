@@ -11,9 +11,14 @@ router.get('/add', (req, res, next)=>{
         .sendFile(path.join(__dirname,'..', 'views', 'addProduct.html'));
 });
 
-router.post('/new', (req, res, next)=>{
+router.post('/add', (req, res, next)=>{
     console.log(req.body);
-    res.end('Done...');
+    res.redirect('/product/detail');
+});
+
+router.use('/detail', (req, res, next)=> {
+    res.status(200)
+        .sendFile(path.join(__dirname, '..','views' ,'product.html'));
 });
 
 module.exports = router;

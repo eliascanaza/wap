@@ -1,5 +1,6 @@
 const express = require('express');
 const path = require('path');
+const fs = require('fs');
 
 const router = express.Router({
     "caseSensitive": false,
@@ -11,9 +12,14 @@ router.get('/add', (req, res, next)=>{
         .sendFile(path.join(__dirname,'..', 'views', 'addUser.html'));
 });
 
-router.post('/new', (req, res, next)=>{
+router.post('/add', (req, res, next)=>{
     console.log(req.body);
-    res.end('Done...');
+    res.redirect('/user/detail');
+});
+
+router.use('/detail', (req, res, next)=>{
+    res.status(200)
+        .sendFile(path.join(__dirname,'..', 'views', 'user.html'));
 });
 
 module.exports = router;

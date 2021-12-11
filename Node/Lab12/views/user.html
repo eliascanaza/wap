@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome {user.name} - WAP</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+</head>
+
+<body>
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item active" aria-current="page">
+                <a href="/">Home</a>
+            </li>
+        </ol>
+    </nav>
+    <div class="container">
+        <div class="row new-user justify-content-md-center">
+            <div class="col col-lg-8">
+                <div class="jumbotron">
+                    <div class="container">
+                        <h1 class="display-4">Welcome Elias</h1>
+                        <div class="lead">
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <span>Name:</span>
+                                    <p>${user.fname}</p>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <span>Last Name:</span>
+                                    <p>${user.lname}</p>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <span>Email:</span>
+                                    <p>${user.email}</p>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <span>Password:</span>
+                                    <p>***********</p>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <span>Address:</span>
+                                <p>${user.address}</p>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <span>City:</span>
+                                    <p>${user.city}</p>
+                                </div>
+                                <div class="form-group col-md-4">
+                                    <span>State:</span>
+                                    <p>${user.state}</p>
+                                </div>
+                                <div class="form-group col-md-2">
+                                    <span>Zip:</span>
+                                    <p>${user.zip}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
