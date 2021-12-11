@@ -14,7 +14,9 @@ router.get('/add', (req, res, next)=>{
 
 router.post('/add', (req, res, next)=>{
     console.log(req.body);
-    res.redirect('/user/detail');
+    let user = req.body;
+    //adding parameters to the url
+    res.redirect(`/user/detail?n=${user.name}&l=${user.lname}&e=${user.email}&a=${user.address}&c=${user.city}&s=${user.state}&z=${user.zip}`);
 });
 
 router.use('/detail', (req, res, next)=>{

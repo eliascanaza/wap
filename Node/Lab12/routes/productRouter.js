@@ -13,7 +13,9 @@ router.get('/add', (req, res, next)=>{
 
 router.post('/add', (req, res, next)=>{
     console.log(req.body);
-    res.redirect('/product/detail');
+    let product = req.body;
+    //adding parameters to the url
+    res.redirect(`/product/detail?n=${product.name}&a=${product.amount}&d=${product.description}`);
 });
 
 router.use('/detail', (req, res, next)=> {
