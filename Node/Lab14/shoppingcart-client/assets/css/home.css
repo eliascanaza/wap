@@ -1,0 +1,15 @@
+body {
+    background-color: #f0fbff; 
+}
+h1 {
+    text-align: center;
+    margin: 1em auto;
+}
+.button-option {
+    display: inline-block;
+    height: 25px;
+    width: 25px;
+}
+.button-option img{
+    width: 80%;
+}
